@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/page/image_cache_page.dart';
-import 'package:flutter_demo/src/page/list_page.dart';
+import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
@@ -37,10 +37,8 @@ class HomePage extends StatelessWidget {
   
   static final Map<String, String> _items = {
     "网络图片缓存": '/${ImageCachePage.pagePathName}',
-  "ListView": "/${ListPage.pagePathName}",
-  "图片b": "image",
-  "图片c": "image"
+    "列表滚动监听": "/${ScrollListenerPage.pagePathName}",
+    "图片b": "image",
+    "图片c": "image",
   };
-
-
 }

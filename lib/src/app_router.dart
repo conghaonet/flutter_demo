@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/home_page.dart';
 import 'package:flutter_demo/src/page/image_cache_page.dart';
-import 'package:flutter_demo/src/page/list_page.dart';
+import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -16,28 +16,20 @@ class AppRouter {
     routes: <RouteBase>[
       GoRoute(
         path: '/',
-        builder: (BuildContext context, GoRouterState state) {
-          return const HomePage();
-        },
+        builder: (BuildContext context, GoRouterState state) => const HomePage(),
         routes: <RouteBase>[
           GoRoute(
             path: ImageCachePage.pagePathName,
-            builder: (BuildContext context, GoRouterState state) {
-              return const ImageCachePage();
-            },
+            builder: (BuildContext context, GoRouterState state) => const ImageCachePage(),
           ),
           GoRoute(
-            path: ListPage.pagePathName,
-            builder: (BuildContext context, GoRouterState state) {
-              return const ListPage();
-            },
+            path: ScrollListenerPage.pagePathName,
+            builder: (BuildContext context, GoRouterState state) => const ScrollListenerPage(),
           ),
         ],
       ),
-
     ],
   );
   GoRouter get goRouter => _goRouter;
-
 }
 AppRouter appRouter = AppRouter();
