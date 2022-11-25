@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ScrollListenerPage extends StatefulWidget {
-  static const pagePathName = 'scroll_listener_page';
+  static const pagePathName = 'scroll_listener';
   const ScrollListenerPage({Key? key}) : super(key: key);
 
   @override
@@ -48,7 +48,7 @@ class _ScrollListenerPageState extends State<ScrollListenerPage> {
           return false;
         },
         child: ListView.builder(
-          restorationId: 'list1',
+          restorationId: 'scroll_listener',
           physics: const AlwaysScrollableScrollPhysics(), // controller为null时，默认为 AlwaysScrollableScrollPhysics
           controller: _controller, // controller为 null 时，physics 默认为 AlwaysScrollableScrollPhysics
           itemCount: 99,
