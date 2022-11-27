@@ -12,24 +12,32 @@ class ScrollToIndexPage extends StatefulWidget {
 class _ScrollToIndexPageState extends State<ScrollToIndexPage> {
   static const maxCount = 1000;
   final _scrollViewKey = GlobalKey();
+  final _random = math.Random();
   final ScrollController _scrollViewController = ScrollController();
   final List<ItemModel> _dataList = List.generate(maxCount, (index) => ItemModel(index));
-  final List<double> _itemHeightList = List.generate(
-    maxCount,
-    growable: false,
-    (index) => (200 * math.Random().nextDouble()),
-  );
+  late final List<double> _itemHeightList;
 
   @override
   void initState() {
     super.initState();
+    _itemHeightList = List.generate(
+      maxCount,
+      growable: false,
+          (index) => math.max(200 * _random.nextDouble(), 50.0),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('滚动到指定位置'),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text('滑动到指定位置', style: TextStyle(fontSize: 18),),
+            Text('SingleChildScrollView + Column', style: TextStyle(fontSize: 13),),
+          ],
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -41,7 +49,7 @@ class _ScrollToIndexPageState extends State<ScrollToIndexPage> {
               return Card(
                 key: _dataList[index].globalKey,
                   child: SizedBox(
-                    height: math.max(_itemHeightList[index], 50),
+                    height: _itemHeightList[index],
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text('Item ${_dataList[index].index}'),
@@ -74,6 +82,11 @@ class _ScrollToIndexPageState extends State<ScrollToIndexPage> {
         ),
       ],
     );
+  }
+  @override
+  void dispose() {
+    _scrollViewController.dispose();
+    super.dispose();
   }
 }
 

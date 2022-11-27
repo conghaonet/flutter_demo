@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/page/image_cache_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page.dart';
+import 'package:flutter_demo/src/page/scroll_to_index_page2.dart';
 import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
@@ -40,6 +41,6 @@ class HomePage extends StatelessWidget {
     "网络图片缓存": '/${ImageCachePage.pagePathName}',
     "列表滚动监听": "/${ScrollListenerPage.pagePathName}",
     "滑动到指定位置": '/${ScrollToIndexPage.pagePathName}',
-    "图片c": "image",
+    "滑动到指定位置2": "/${ScrollToIndexPage2.pagePathName}",
   };
 }

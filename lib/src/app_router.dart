@@ -3,6 +3,7 @@ import 'package:flutter_demo/src/home_page.dart';
 import 'package:flutter_demo/src/page/image_cache_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page.dart';
+import 'package:flutter_demo/src/page/scroll_to_index_page2.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -30,6 +31,10 @@ class AppRouter {
           GoRoute(
             path: ScrollToIndexPage.pagePathName,
             builder: (BuildContext context, GoRouterState state) => const ScrollToIndexPage(),
+          ),
+          GoRoute(
+            path: ScrollToIndexPage2.pagePathName,
+            builder: (BuildContext context, GoRouterState state) => const ScrollToIndexPage2(),
           ),
         ],
       ),
