@@ -28,6 +28,7 @@ class _ScrollToIndexPage2State extends State<ScrollToIndexPage2> {
     _autoScrollController = AutoScrollController(
       viewportBoundaryGetter: () => Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom),
       axis: Axis.vertical,
+      suggestedRowHeight: 100
     );
   }
 
