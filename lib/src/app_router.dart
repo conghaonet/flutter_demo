@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/home_page.dart';
 import 'package:flutter_demo/src/page/image_cache_page.dart';
+import 'package:flutter_demo/src/page/refresh_load_more_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page2.dart';
@@ -35,6 +36,10 @@ class AppRouter {
           GoRoute(
             path: ScrollToIndexPage2.pagePathName,
             builder: (BuildContext context, GoRouterState state) => const ScrollToIndexPage2(),
+          ),
+          GoRoute(
+            path: RefreshLoadMorePage.pagePathName,
+            builder: (BuildContext context, GoRouterState state) => const RefreshLoadMorePage(),
           ),
         ],
       ),
