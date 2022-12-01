@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HitTestBehaviorPage extends StatefulWidget {
-  static const pagePathName = 'hit_test_behavior_page';
+  static const pagePathName = 'hit_test_behavior';
   const HitTestBehaviorPage({Key? key}) : super(key: key);
 
   @override
