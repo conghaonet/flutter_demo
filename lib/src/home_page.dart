@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/page/floating_touch_page.dart';
+import 'package:flutter_demo/src/page/hit_test_behavior_page.dart';
 import 'package:flutter_demo/src/page/image_cache_page.dart';
 import 'package:flutter_demo/src/page/refresh_load_more_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
@@ -46,6 +47,7 @@ class HomePage extends StatelessWidget {
     "滑动到指定位置2": "/${ScrollToIndexPage2.pagePathName}",
     "下拉刷新+上拉加载更多": "/${RefreshLoadMorePage.pagePathName}",
     "全局悬浮按钮": "/${FloatingTouchPage.pagePathName}",
+    "测试HitTestBehavior": "/${HitTestBehaviorPage.pagePathName}",
   };
 
 

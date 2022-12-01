@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/home_page.dart';
 import 'package:flutter_demo/src/page/floating_touch_page.dart';
+import 'package:flutter_demo/src/page/hit_test_behavior_page.dart';
 import 'package:flutter_demo/src/page/image_cache_page.dart';
 import 'package:flutter_demo/src/page/refresh_load_more_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
@@ -45,6 +46,10 @@ class AppRouter {
           GoRoute(
             path: FloatingTouchPage.pagePathName,
             builder: (BuildContext context, GoRouterState state) => const FloatingTouchPage(),
+          ),
+          GoRoute(
+            path: HitTestBehaviorPage.pagePathName,
+            builder: (BuildContext context, GoRouterState state) => const HitTestBehaviorPage(),
           ),
         ],
       ),
