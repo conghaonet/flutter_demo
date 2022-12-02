@@ -11,9 +11,9 @@ import 'package:flutter_demo/src/page/scroll_to_index_page2.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
-  factory AppRouter() => _appRoute;
-  static final AppRouter _appRoute = AppRouter._internal();
   AppRouter._internal();
+  static final AppRouter _appRoute = AppRouter._internal();
+  factory AppRouter() => _appRoute;
 
   /// The route configuration.
   final GoRouter _goRouter = GoRouter(
@@ -62,4 +62,3 @@ class AppRouter {
   );
   GoRouter get goRouter => _goRouter;
 }
-AppRouter appRouter = AppRouter();

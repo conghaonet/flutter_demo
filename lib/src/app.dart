@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: appRouter.goRouter,
+      routerConfig: AppRouter().goRouter,
 
       /// 类似 Android 中 onSaveInstanceState 的实现。
       /// 当系统"未经你许可" 时销毁了你的 Activity 时，比如横竖屏切换、点击 Home 键。
