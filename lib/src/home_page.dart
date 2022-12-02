@@ -3,6 +3,7 @@ import 'package:flutter_demo/src/page/floating_touch_page.dart';
 import 'package:flutter_demo/src/page/future_builder_page.dart';
 import 'package:flutter_demo/src/page/hit_test_behavior_page.dart';
 import 'package:flutter_demo/src/page/image_cache_page.dart';
+import 'package:flutter_demo/src/page/inherited_widget_demo_page.dart';
 import 'package:flutter_demo/src/page/refresh_load_more_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page.dart';
@@ -50,6 +51,7 @@ class HomePage extends StatelessWidget {
     "全局悬浮按钮": "/${FloatingTouchPage.pagePathName}",
     "测试HitTestBehavior": "/${HitTestBehaviorPage.pagePathName}",
     "防止FutureBuilder重复请求数据": "/${FutureBuilderPage.pagePathName}",
+    "Flutter化单例InheritedWidget": "/${InheritedWidgetDemoPage.pagePathName}",
   };
 
 }
