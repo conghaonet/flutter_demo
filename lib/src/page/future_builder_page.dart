@@ -39,7 +39,7 @@ class _FutureBuilderPageState extends State<FutureBuilderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('防止FutureBuilder重复刷新'),
+        title: const Text('防止FutureBuilder重复请求数据'),
       ),
       body: Column(
         children: [

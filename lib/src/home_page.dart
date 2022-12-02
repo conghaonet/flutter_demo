@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
     "下拉刷新+上拉加载更多": "/${RefreshLoadMorePage.pagePathName}",
     "全局悬浮按钮": "/${FloatingTouchPage.pagePathName}",
     "测试HitTestBehavior": "/${HitTestBehaviorPage.pagePathName}",
-    "防止FutureBuilder重复刷新": "/${FutureBuilderPage.pagePathName}",
+    "防止FutureBuilder重复请求数据": "/${FutureBuilderPage.pagePathName}",
   };
 
 }
