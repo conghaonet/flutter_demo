@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/home_page.dart';
+import 'package:flutter_demo/src/page/animated_container_demo_page.dart';
 import 'package:flutter_demo/src/page/clip_demo_page.dart';
 import 'package:flutter_demo/src/page/floating_touch_page.dart';
 import 'package:flutter_demo/src/page/future_builder_page.dart';
@@ -66,6 +67,11 @@ class AppRouter {
             path: ClipDemoPage.pagePathName,
             builder: (BuildContext context, GoRouterState state) => const ClipDemoPage(),
           ),
+          GoRoute(
+            path: AnimatedContainerDemoPage.pagePathName,
+            builder: (BuildContext context, GoRouterState state) => const AnimatedContainerDemoPage(),
+          ),
+
         ],
       ),
     ],

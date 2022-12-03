@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/src/page/animated_container_demo_page.dart';
 import 'package:flutter_demo/src/page/clip_demo_page.dart';
 import 'package:flutter_demo/src/page/floating_touch_page.dart';
 import 'package:flutter_demo/src/page/future_builder_page.dart';
@@ -54,6 +55,8 @@ class HomePage extends StatelessWidget {
     "防止FutureBuilder重复请求数据": "/${FutureBuilderPage.pagePathName}",
     "Flutter化单例InheritedWidget": "/${InheritedWidgetDemoPage.pagePathName}",
     "多种圆角实现": "/${ClipDemoPage.pagePathName}",
+    "AnimatedContainer": "/${AnimatedContainerDemoPage.pagePathName}",
+
   };
   /// get_it, mobx, provider, flutter_bloc
 
