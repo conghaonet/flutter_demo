@@ -58,8 +58,8 @@ class HomePage extends StatelessWidget {
     "Flutter化单例InheritedWidget": "/${InheritedWidgetDemoPage.pagePathName}",
     "多种圆角实现": "/${ClipDemoPage.pagePathName}",
     "AnimatedContainer": "/${AnimatedContainerDemoPage.pagePathName}",
-    "ScoreStar(LeafRenderObjectWidget)": "/${ScoreStarPage.pagePathName}",
     "屏幕尺寸信息": "/${ScreenInfoPage.pagePathName}",
+    "自定义评分(LeafRenderObjectWidget)": "/${ScoreStarPage.pagePathName}",
 
   };
   /// get_it, mobx, provider, flutter_bloc
