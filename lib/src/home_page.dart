@@ -7,6 +7,7 @@ import 'package:flutter_demo/src/page/hit_test_behavior_page.dart';
 import 'package:flutter_demo/src/page/image_cache_page.dart';
 import 'package:flutter_demo/src/page/inherited_widget_demo_page.dart';
 import 'package:flutter_demo/src/page/refresh_load_more_page.dart';
+import 'package:flutter_demo/src/page/score_star_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page2.dart';
@@ -56,6 +57,7 @@ class HomePage extends StatelessWidget {
     "Flutter化单例InheritedWidget": "/${InheritedWidgetDemoPage.pagePathName}",
     "多种圆角实现": "/${ClipDemoPage.pagePathName}",
     "AnimatedContainer": "/${AnimatedContainerDemoPage.pagePathName}",
+    "ScoreStar(LeafRenderObjectWidget)": "/${ScoreStarPage.pagePathName}",
 
   };
   /// get_it, mobx, provider, flutter_bloc
