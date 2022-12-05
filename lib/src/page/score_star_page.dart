@@ -9,19 +9,17 @@ class ScoreStarPage extends StatefulWidget {
   State<ScoreStarPage> createState() => _ScoreStarPageState();
 }
 
+/// 状态栏高度
 class _ScoreStarPageState extends State<ScoreStarPage> {
   @override
   Widget build(BuildContext context) {
+    MediaQuery.of(context).systemGestureInsets;
     return Material(
       child: SafeArea(
         child: Column(
           children: const [
-            Placeholder(
-              child: SizedBox(height: 40, width: double.infinity,),
-            ),
-            ScoreStar(
-              score: 3.5,
-            ),
+            Placeholder(child: SizedBox(height: 40, width: double.infinity,),),
+            ScoreStar(score: 3.5,),
           ],
         ),
       ),

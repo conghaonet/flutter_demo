@@ -85,7 +85,6 @@ class RenderScoreStar extends RenderBox {
   @override
   void paint(PaintingContext context, Offset offset) {
     _starPainter(context, offset, backgroundColor);
-
     context.pushClipRect(
         needsCompositing,
         offset,

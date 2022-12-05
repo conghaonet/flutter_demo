@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/page/animated_container_demo_page.dart';
 import 'package:flutter_demo/src/page/clip_demo_page.dart';
+import 'package:flutter_demo/src/page/screen_info_page.dart';
 import 'package:flutter_demo/src/page/floating_touch_page.dart';
 import 'package:flutter_demo/src/page/future_builder_page.dart';
 import 'package:flutter_demo/src/page/hit_test_behavior_page.dart';
@@ -58,6 +59,7 @@ class HomePage extends StatelessWidget {
     "多种圆角实现": "/${ClipDemoPage.pagePathName}",
     "AnimatedContainer": "/${AnimatedContainerDemoPage.pagePathName}",
     "ScoreStar(LeafRenderObjectWidget)": "/${ScoreStarPage.pagePathName}",
+    "屏幕尺寸信息": "/${ScreenInfoPage.pagePathName}",
 
   };
   /// get_it, mobx, provider, flutter_bloc

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/home_page.dart';
 import 'package:flutter_demo/src/page/animated_container_demo_page.dart';
 import 'package:flutter_demo/src/page/clip_demo_page.dart';
+import 'package:flutter_demo/src/page/screen_info_page.dart';
 import 'package:flutter_demo/src/page/floating_touch_page.dart';
 import 'package:flutter_demo/src/page/future_builder_page.dart';
 import 'package:flutter_demo/src/page/hit_test_behavior_page.dart';
@@ -75,6 +76,10 @@ class AppRouter {
           GoRoute(
             path: ScoreStarPage.pagePathName,
             builder: (BuildContext context, GoRouterState state) => const ScoreStarPage(),
+          ),
+          GoRoute(
+            path: ScreenInfoPage.pagePathName,
+            builder: (BuildContext context, GoRouterState state) => const ScreenInfoPage(),
           ),
 
         ],
