@@ -233,7 +233,7 @@ class _LayoutWidgetsPageState extends State<LayoutWidgetsPage> {
         title: Text(title),
         subtitle: util.isNullOrBlank(subTitle) ? null : Text(subTitle!),
         onTap: util.isNullOrBlank(link) ? null : () {
-          GoRouter.of(context).go('/${WebViewPage.pagePathName}?title=$title&link=$link');
+          GoRouter.of(context).push('/${WebViewPage.pagePathName}?title=$title&link=$link');
         },
         enabled: !util.isNullOrBlank(link),
       ),

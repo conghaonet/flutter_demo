@@ -91,7 +91,7 @@ class AppRouter {
             path: WebViewPage.pagePathName,
             builder: (BuildContext context, GoRouterState state) => WebViewPage(
               title: state.queryParams['title'],
-              link: state.queryParams['link'] ?? '',
+              link: state.queryParams['link'],
             ),
           ),
 
