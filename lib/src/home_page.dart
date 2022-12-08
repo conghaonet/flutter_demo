@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/page/animated_container_demo_page.dart';
 import 'package:flutter_demo/src/page/clip_demo_page.dart';
+import 'package:flutter_demo/src/page/layout_widgets_page.dart';
 import 'package:flutter_demo/src/page/screen_info_page.dart';
 import 'package:flutter_demo/src/page/floating_touch_page.dart';
 import 'package:flutter_demo/src/page/future_builder_page.dart';
@@ -47,6 +48,7 @@ class HomePage extends StatelessWidget {
   }
   
   static final Map<String, String> _items = {
+    "Layout Widgets": "/${LayoutWidgetsPage.pagePathName}",
     "网络图片缓存": '/${ImageCachePage.pagePathName}',
     "列表滚动监听": "/${ScrollListenerPage.pagePathName}",
     "滑动到指定位置": '/${ScrollToIndexPage.pagePathName}',
@@ -60,7 +62,6 @@ class HomePage extends StatelessWidget {
     "AnimatedContainer": "/${AnimatedContainerDemoPage.pagePathName}",
     "屏幕尺寸信息": "/${ScreenInfoPage.pagePathName}",
     "自定义评分(LeafRenderObjectWidget)": "/${ScoreStarPage.pagePathName}",
-
   };
   /// get_it, mobx, provider, flutter_bloc
 

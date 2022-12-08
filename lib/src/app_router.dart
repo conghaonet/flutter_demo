@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/home_page.dart';
 import 'package:flutter_demo/src/page/animated_container_demo_page.dart';
 import 'package:flutter_demo/src/page/clip_demo_page.dart';
+import 'package:flutter_demo/src/page/layout_widgets_page.dart';
 import 'package:flutter_demo/src/page/screen_info_page.dart';
 import 'package:flutter_demo/src/page/floating_touch_page.dart';
 import 'package:flutter_demo/src/page/future_builder_page.dart';
@@ -80,6 +81,10 @@ class AppRouter {
           GoRoute(
             path: ScreenInfoPage.pagePathName,
             builder: (BuildContext context, GoRouterState state) => const ScreenInfoPage(),
+          ),
+          GoRoute(
+            path: LayoutWidgetsPage.pagePathName,
+            builder: (BuildContext context, GoRouterState state) => const LayoutWidgetsPage(),
           ),
 
         ],
