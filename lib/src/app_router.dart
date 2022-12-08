@@ -14,6 +14,7 @@ import 'package:flutter_demo/src/page/score_star_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page2.dart';
+import 'package:flutter_demo/src/page/web_view_page.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -85,6 +86,13 @@ class AppRouter {
           GoRoute(
             path: LayoutWidgetsPage.pagePathName,
             builder: (BuildContext context, GoRouterState state) => const LayoutWidgetsPage(),
+          ),
+          GoRoute(
+            path: WebViewPage.pagePathName,
+            builder: (BuildContext context, GoRouterState state) => WebViewPage(
+              title: state.queryParams['title'],
+              link: state.queryParams['link'] ?? '',
+            ),
           ),
 
         ],

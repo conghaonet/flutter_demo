@@ -13,6 +13,7 @@ import 'package:flutter_demo/src/page/score_star_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page2.dart';
+import 'package:flutter_demo/src/page/web_view_page.dart';
 import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
@@ -62,6 +63,7 @@ class HomePage extends StatelessWidget {
     "AnimatedContainer": "/${AnimatedContainerDemoPage.pagePathName}",
     "屏幕尺寸信息": "/${ScreenInfoPage.pagePathName}",
     "自定义评分(LeafRenderObjectWidget)": "/${ScoreStarPage.pagePathName}",
+    "WebViewPage": "/${WebViewPage.pagePathName}",
   };
   /// get_it, mobx, provider, flutter_bloc
 

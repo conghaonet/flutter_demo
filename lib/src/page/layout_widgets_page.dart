@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/src/page/web_view_page.dart';
+import 'package:go_router/go_router.dart';
 
 import '../my_util.dart' as util;
 
-class LayoutWidgetsPage extends StatelessWidget {
+class LayoutWidgetsPage extends StatefulWidget {
   static const pagePathName = 'layout_widgets';
   const LayoutWidgetsPage({Key? key}) : super(key: key);
 
+  @override
+  State<LayoutWidgetsPage> createState() => _LayoutWidgetsPageState();
+}
+
+class _LayoutWidgetsPageState extends State<LayoutWidgetsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -226,7 +233,7 @@ class LayoutWidgetsPage extends StatelessWidget {
         title: Text(title),
         subtitle: util.isNullOrBlank(subTitle) ? null : Text(subTitle!),
         onTap: util.isNullOrBlank(link) ? null : () {
-
+          GoRouter.of(context).go('/${WebViewPage.pagePathName}?title=$title&link=$link');
         },
         enabled: !util.isNullOrBlank(link),
       ),
