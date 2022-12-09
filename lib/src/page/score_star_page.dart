@@ -33,24 +33,12 @@ class _ScoreStarPageState extends State<ScoreStarPage> {
       ),
       persistentFooterButtons: _buildFooterButtons(),
       body: SafeArea(
-/*
-        child: Row(
-          children: [
-            Text('自定义评分'),
-            Expanded(
-              child: ScoreStar(score: 3,),
-            ),
-            Text('自定义评分'),
-          ],
-        ),
-*/
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Placeholder(child: SizedBox(height: 40, width: double.infinity,),),
             Container(width: double.infinity, height: 33, color: Colors.lightBlue,),
-            ScoreStar(score: 3,),
+            const ScoreStar(score: 3,),
             Row(
               children: const [
                 Text('自定义'),
