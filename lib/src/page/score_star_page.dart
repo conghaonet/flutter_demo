@@ -31,50 +31,29 @@ class _ScoreStarPageState extends State<ScoreStarPage> {
       appBar: AppBar(
         title: const Text('自定义评分'),
       ),
-      persistentFooterButtons: [
-        OutlinedButton(
-          onPressed: _height == null ? null : () {
-            setState(() {
-              _height = _height! + 10;
-            });
-          },
-          child: const Text('高度+10'),
-        ),
-        OutlinedButton(
-          onPressed: _width == null ? null : () {
-            setState(() {
-              _width = _width! + 10;
-            });
-          },
-          child: const Text('宽度+10'),
-        ),
-        OutlinedButton(
-          onPressed: () {
-            setState(() {
-              _width = 50;
-              _height = 50;
-            });
-          },
-          child: const Text('50x50'),
-        ),
-        OutlinedButton(
-          onPressed: () {
-            setState(() {
-              _width = null;
-              _height = null;
-            });
-          },
-          child: const Text('最大'),
-        ),
-      ],
+      persistentFooterButtons: _buildFooterButtons(),
       body: SafeArea(
+/*
+        child: Row(
+          children: [
+            Text('自定义评分'),
+            Expanded(
+              child: ScoreStar(score: 3,),
+            ),
+            Text('自定义评分'),
+          ],
+        ),
+*/
+
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Placeholder(child: SizedBox(height: 40, width: double.infinity,),),
+            Container(width: double.infinity, height: 33, color: Colors.lightBlue,),
+            ScoreStar(score: 3,),
             Row(
               children: const [
-                Expanded(child: Text('ABCDEFG')),
+                Text('自定义'),
                 Expanded(
                   child: ScoreStar(score: 3,),
                 ),
@@ -98,5 +77,44 @@ class _ScoreStarPageState extends State<ScoreStarPage> {
         ),
       ),
     );
+  }
+
+  List<Widget> _buildFooterButtons() {
+    return [
+      OutlinedButton(
+        onPressed: _height == null ? null : () {
+          setState(() {
+            _height = _height! + 10;
+          });
+        },
+        child: const Text('高度+10'),
+      ),
+      OutlinedButton(
+        onPressed: _width == null ? null : () {
+          setState(() {
+            _width = _width! + 10;
+          });
+        },
+        child: const Text('宽度+10'),
+      ),
+      OutlinedButton(
+        onPressed: () {
+          setState(() {
+            _width = 50;
+            _height = 50;
+          });
+        },
+        child: const Text('50x50'),
+      ),
+      OutlinedButton(
+        onPressed: () {
+          setState(() {
+            _width = null;
+            _height = null;
+          });
+        },
+        child: const Text('最大'),
+      ),
+    ];
   }
 }

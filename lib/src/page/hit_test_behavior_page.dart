@@ -87,6 +87,7 @@ class _HitTestBehaviorPageState extends State<HitTestBehaviorPage> {
 
     return <Widget>[
       Stack(
+        alignment: Alignment.topCenter,
         children: [
           Listener(
             onPointerDown: (event) {
@@ -115,10 +116,10 @@ class _HitTestBehaviorPageState extends State<HitTestBehaviorPage> {
               ),
             ),
           ),
-          IgnorePointer(
-            ignoring: true,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(58, 50, 0, 0),
+          Positioned(
+            top: 50,
+            child: IgnorePointer(
+              ignoring: true,
               child: Text(behaviorName),
             ),
           ),
