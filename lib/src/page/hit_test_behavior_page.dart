@@ -106,8 +106,7 @@ class _HitTestBehaviorPageState extends State<HitTestBehaviorPage> {
             child: SizedBox(
               width: 300,
               height: 200,
-              child: Align(
-                alignment: Alignment.center,
+              child: Center(
                 child: Container(
                   width: 200,
                   height: 100,

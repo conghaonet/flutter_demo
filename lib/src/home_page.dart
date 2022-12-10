@@ -13,6 +13,7 @@ import 'package:flutter_demo/src/page/score_star_page.dart';
 import 'package:flutter_demo/src/page/scroll_listener_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page.dart';
 import 'package:flutter_demo/src/page/scroll_to_index_page2.dart';
+import 'package:flutter_demo/src/page/single_child_render_object_demo_page.dart';
 import 'package:flutter_demo/src/page/web_view_page.dart';
 import 'package:go_router/go_router.dart';
 
@@ -49,6 +50,7 @@ class HomePage extends StatelessWidget {
   }
   
   static final Map<String, String> _items = {
+    "SingleChildRenderObjectDemo": "/${SingleChildRenderObjectDemoPage.pagePathName}",
     "Layout Widgets": "/${LayoutWidgetsPage.pagePathName}",
     "网络图片缓存": '/${ImageCachePage.pagePathName}',
     "列表滚动监听": "/${ScrollListenerPage.pagePathName}",
