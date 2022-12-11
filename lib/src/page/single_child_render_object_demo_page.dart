@@ -25,75 +25,49 @@ class _SingleChildRenderObjectDemoPageState extends State<SingleChildRenderObjec
       appBar: AppBar(
         title: const Text('SingleChildRenderObjectWidget'),
       ),
-      body: Container(
-        color: Colors.grey,
-        child: _MySingleChildWidget(
-          color: _color,
-          child: const Center(
-            child: Text('hello', style: TextStyle(color: Colors.black),),
+      body: _MySingleChildWidget(
+        color: _color,
+        child: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              setState(() {
+                _color = Color.fromARGB(255, _random.nextInt(256), _random.nextInt(256), _random.nextInt(256),);
+              });
+            },
+            child: const Text('改变颜色', style: TextStyle(color: Colors.black),),
           ),
         ),
       ),
-      persistentFooterButtons: [
-        ElevatedButton(
-          onPressed: () {
-            setState(() {
-              _color = Color.fromARGB(
-                255,
-                _random.nextInt(256), /// Random().nextInt(256); // Value is >= 0 and < 256.
-                _random.nextInt(256),
-                _random.nextInt(256),
-              );
-            });
-          },
-          child: Text('改变颜色'),
-        ),
-      ],
     );
   }
 }
 
 class _MySingleChildWidget extends SingleChildRenderObjectWidget {
   final Color color;
-  final double? width;
   const _MySingleChildWidget({
-    super.key,
     super.child,
-    required this.color,
-    this.width
+    required this.color
   });
 
   @override
   _MyRenderBox createRenderObject(BuildContext context) {
-    return _MyRenderBox(color, width);
+    return _MyRenderBox(color);
   }
 
   @override
   void updateRenderObject(BuildContext context, covariant _MyRenderBox renderObject) {
-    renderObject
-      ..color = color
-      ..width = width;
+    renderObject.color = color;
   }
 }
 
-
 class _MyRenderBox extends RenderBox with RenderObjectWithChildMixin<RenderBox> {
   Color _color;
-  double? _width;
-  _MyRenderBox(this._color, this._width);
+  _MyRenderBox(this._color);
 
   Color get color => _color;
   set color(Color c) {
     if(c != _color) {
-      debugPrint('Color is $c');
       _color = c;
-      markNeedsPaint();
-    }
-  }
-  double? get width => _width;
-  set width(double? w) {
-    if(_width != w) {
-      _width = w;
       markNeedsPaint();
     }
   }
